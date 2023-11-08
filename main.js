@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownItems = document.querySelectorAll(".dropdown-item");
 
     const systemMessages = {
-        ASEGURAMIENTO: "Si el incidente es masivo, genera un iTracker y avísanos por los medios que utilizamos usualmente (grupo de WhatsApp, llamada/mensaje por Teams). Si es particular, genera un iTracker y aguarda que nos comuniquemos a la brevedad. Si es fuera de horario laboral, genera un iTracker y llámanos a la guardia.",
+        ASEGURAMIENTO: "👉 Si el incidente es masivo, genera un iTracker y avísanos por los medios que utilizamos usualmente (grupo de WhatsApp, llamada/mensaje por Teams). 👉 Si es particular, genera un iTracker y aguarda que nos comuniquemos a la brevedad. 👉 Si es fuera de horario laboral, genera un iTracker y llámanos a la guardia.",
         FUNCIONAL: "En desarrollo",
     };
 
