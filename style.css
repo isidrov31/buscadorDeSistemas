@@ -7,18 +7,13 @@ body{
 .text-center{
     background-color: #f8f9fc;
     border: 1px solid #e3e6f0;
+    border-radius: 5px;
 }
 
 .title{
     color: #4e73df;
 }
 
-#containerSearchInput,
-#containerSearchList{
-    border: 2px solid #e3e6f0;
-    padding: 8px;
-
-}
 
 #search{
     display: flex;
@@ -42,4 +37,18 @@ body{
 
 #messageContainer{
     background-color: #f8f9fc;
+}
+
+
+[id^="message_"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.dropdown-menu {
+    max-height: 200px; /* Altura máxima de la lista desplegable */
+    overflow-y: auto; /* Habilita el scroll vertical si la lista excede la altura máxima */
 }
