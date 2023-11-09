@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const systemMessages = {
         ASEGURAMIENTO: [
             "👉 Si el incidente es masivo, genera un iTracker y avísanos por los medios que utilizamos usualmente (grupo de WhatsApp, llamada/mensaje por Teams).",
-            "👉 Si es particular, genera un iTracker y aguarda que nos comuniquemos a la brevedad.",
-            "👉 Si es fuera de horario laboral, genera un iTracker y llámanos a la guardia."
+            "👉 Si es particular, genera un iTracker y aguarda que nos comuniquemos.",
+            "👉 Si es fuera de horario laboral (Lunes a Viernes de 9 a 18), generá un iTracker y llámanos a la guardia 08004442228."
         ],
         FUNCIONAL: [
             "En desarrollo"
