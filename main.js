@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const searchButton = document.getElementById("searchButton");
     const messageContainer = document.getElementById("messageContainer");
-    const dropdownItems = document.querySelectorAll(".dropdown-item");
-    const systemDropdown = document.getElementById("dropdownMenuButton");
+    const systemList = document.getElementById("systemList");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
 
     const systemMessages = {
         ASEGURAMIENTO: [
@@ -15,8 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
     };
 
-    // Obtener los elementos de la lista desplegable
-    const dropdownItemsArray = Array.from(dropdownItems);
+    // Obtener los elementos de la lista desplegable y convertirlos en un array
+    const dropdownItems = Array.from(dropdownMenu.querySelectorAll(".dropdown-item"));
+
+    // Ordenar los elementos alfabéticamente
+    dropdownItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+    // Volver a agregar los elementos al menú desplegable
+    dropdownItems.forEach(item => dropdownMenu.appendChild(item));
 
     searchButton.addEventListener("click", function () {
         const searchInput = document.getElementById("searchInput").value.trim().toUpperCase();
@@ -25,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             messageContainer.innerHTML = "<p>Por favor, ingresa un sistema en el buscador.</p>";
         } else {
             // Filtrar elementos de la lista desplegable para encontrar coincidencias
-            const matchingItems = dropdownItemsArray.filter(item =>
+            const matchingItems = dropdownItems.filter(item =>
                 item.textContent.toUpperCase().includes(searchInput)
             );
 
@@ -57,8 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Evento de escucha para el input
+    document.getElementById("searchInput").addEventListener("input", function () {
+        const inputText = this.value.trim().toUpperCase();
+
+        // Limpiar opciones anteriores
+        systemList.innerHTML = "";
+
+        // Verificar si el input no está vacío
+        if (inputText !== "") {
+            // Filtrar elementos de la lista desplegable y agregar a datalist
+            dropdownItems.forEach(item => {
+                const systemName = item.textContent.toUpperCase();
+                if (systemName.includes(inputText)) {
+                    const option = document.createElement("option");
+                    option.value = item.textContent;
+                    systemList.appendChild(option);
+                }
+            });
+        }
+    });
 });
-
-    
-
 

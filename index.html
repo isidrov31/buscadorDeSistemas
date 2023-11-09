@@ -15,7 +15,8 @@
                 <p class="text-center info">¿Como debo reclamar un incidente? Vamos a ayudarte a responder esta consulta. Canalizar el incidente por la vía correcta, mejorará los tiempos de respuesta. Ingresa el nombre del sistema que quieres reportar o reclamar:</p>
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="searchInput" placeholder="Ingresa el sistema a buscar">
+                    <input list="systemList" type="text" class="form-control" id="searchInput" placeholder="Ingresa el sistema a buscar">
+                    <datalist id="systemList"></datalist>
                     <button class="btn btn-primary" id="searchButton" type="button">Buscar</button>
                 </div>
 
