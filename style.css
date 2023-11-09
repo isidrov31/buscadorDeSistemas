@@ -52,3 +52,46 @@ body{
     max-height: 200px; /* Altura máxima de la lista desplegable */
     overflow-y: auto; /* Habilita el scroll vertical si la lista excede la altura máxima */
 }
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.input-group {
+    transition: all 0.3s ease;
+}
+
+.input-group:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#searchButton {
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #007bff;
+}
+
+.dropdown-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-item {
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+}
+
+#messageContainer {
+    margin-top: 20px;
+}
